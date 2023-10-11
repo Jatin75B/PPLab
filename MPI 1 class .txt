@@ -1,0 +1,46 @@
+2 types of parallel programming:
+1)shared memory PP
+
+2)Distributed PP
+each node will have it's own process nd memory
+ex: MPI, Posics
+
+Programming name:
+SPMD-- Single Programm Multiple Data
+
+MPI Code
+
+2 function where pa|| function exist
+-  MPI_Init(NULL,NULL);
+-  MPI_Finalize();
+
+$communicator
+____all function have MPI_ ---->remember
+____MPI_COMM_WORLD-- it is name of group of process
+
+_________________________
+Variable neeeded:
+
+int comm_size<- space where the parallel function runs
+MPI_Comm_size(MPI_COMM_WORLD,&comm_size)
+
+int my_rank
+MPI_Comm_rank(MPI_COMM_WORLD,&my_rank);
+
+char processor_name[MPI_MAX_PROCESSOR_NAME];
+int name_length;
+MPI_Get_processor_name(processor name,&name_length);
+_________________________
+Functions in MPI:
+
+MPI_Send(number, 1,1MPI_INT,1,0, MPI_COMM_World);
+
+MPI_Rev
+
+
+
+TO COMPLIE--> mpicc -0 [name of output file] [code file]
+TO RUN--> mpirun -n [number of processor] [file name]
+
+
+Number of processor-->it will run only if the pc has that have many number of codes
