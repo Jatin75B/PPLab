@@ -9,7 +9,7 @@ Programming name:
 SPMD-- Single Programm Multiple Data
 
 MPI Code
-
+Reference: https://curc.readthedocs.io/en/latest/programming/MPI-C.html
 2 function where pa|| function exist
 -  MPI_Init(NULL,NULL);
 -  MPI_Finalize();
